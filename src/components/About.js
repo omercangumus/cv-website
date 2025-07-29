@@ -1,81 +1,72 @@
 import React from 'react';
-import { FaCode, FaLaptopCode, FaUsers, FaRocket } from 'react-icons/fa';
 import './About.css';
+import { FaCode, FaLaptopCode, FaUsers, FaRocket } from 'react-icons/fa';
 
 const About = () => {
-  const features = [
-    {
-      icon: <FaCode />,
-      title: "Modern Teknolojiler",
-      description: "React, JavaScript, TypeScript ve modern web teknolojileri ile çalışıyorum."
-    },
-    {
-      icon: <FaLaptopCode />,
-      title: "Responsive Tasarım",
-      description: "Tüm cihazlarda mükemmel görünen responsive web siteleri geliştiriyorum."
-    },
-    {
-      icon: <FaUsers />,
-      title: "Kullanıcı Odaklı",
-      description: "Kullanıcı deneyimini ön planda tutarak sezgisel arayüzler tasarlıyorum."
-    },
-    {
-      icon: <FaRocket />,
-      title: "Performans",
-      description: "Hızlı ve optimize edilmiş web uygulamaları geliştiriyorum."
-    }
-  ];
-
   return (
-    <section id="about" className="about section">
+    <section className="about" id="about">
       <div className="container">
         <h2 className="section-title">Hakkımda</h2>
         <div className="about-content">
           <div className="about-text">
-            <h3>Merhaba! Ben [Adınız Soyadınız]</h3>
+            <h3>Yazılım Mühendisliği Öğrencisi & Geliştirici</h3>
             <p>
-              3+ yıllık deneyimimle modern web teknolojileri konusunda uzmanlaşmış 
-              bir Front-End Developer'ım. Kullanıcı deneyimini ön planda tutarak, 
-              performanslı ve sürdürülebilir web uygulamaları geliştiriyorum.
+              Merhaba! Ben Ömer Can Gümüş. Fırat Üniversitesi'nde 3. sınıf Yazılım Mühendisliği öğrencisiyim. 
+              Teknolojiye olan ilgim zamanla bulut bilişim ve yapay zeka alanlarında güçlü bir tutkuya dönüştü.
             </p>
             <p>
-              React ekosistemi, modern JavaScript (ES6+), CSS3 ve HTML5 konularında 
-              güçlü bir temel oluşturdum. Ayrıca TypeScript, Next.js, Tailwind CSS 
-              gibi modern teknolojilerle de çalışıyorum.
-            </p>
-            <p>
-              Sürekli öğrenmeye odaklanıyorum ve yeni teknolojileri takip ediyorum. 
-              Takım çalışmasına değer veriyor ve projelerde en iyi sonucu almak için 
-              çaba gösteriyorum.
+              Şu anda AWS platformunda aktif olarak çalışıyor, projeler geliştiriyor ve bu alandaki becerilerimi 
+              sürekli geliştiriyorum. C# ve Python konularında uzmanım. Hızlı adapte olur, detaylara dikkat eder 
+              ve sürekli öğrenmeye açığım.
             </p>
             
             <div className="about-stats">
               <div className="stat">
-                <h4>3+</h4>
+                <h4>3</h4>
                 <p>Yıl Deneyim</p>
               </div>
               <div className="stat">
-                <h4>20+</h4>
-                <p>Tamamlanan Proje</p>
+                <h4>5+</h4>
+                <p>Proje Tamamlandı</p>
               </div>
               <div className="stat">
-                <h4>15+</h4>
-                <p>Mutlu Müşteri</p>
+                <h4>2</h4>
+                <p>Programlama Dili</p>
               </div>
             </div>
           </div>
           
-          <div className="about-features">
-            <div className="features-grid">
-              {features.map((feature, index) => (
-                <div key={index} className="feature-card">
-                  <div className="feature-icon">
-                    {feature.icon}
-                  </div>
-                  <h4>{feature.title}</h4>
-                  <p>{feature.description}</p>
-                </div>
-              ))}
+          <div className="features-grid">
+            <div className="feature-card">
+              <div className="feature-icon">
+                <FaCode />
+              </div>
+              <h4>Yazılım Geliştirme</h4>
+              <p>C# ve Python ile masaüstü ve web uygulamaları geliştiriyorum.</p>
+            </div>
+            
+            <div className="feature-card">
+              <div className="feature-icon">
+                <FaLaptopCode />
+              </div>
+              <h4>Bulut Bilişim</h4>
+              <p>AWS platformunda aktif çalışıyor, cloud-native çözümler üretiyorum.</p>
+            </div>
+            
+            <div className="feature-card">
+              <div className="feature-icon">
+                <FaUsers />
+              </div>
+              <h4>Takım Çalışması</h4>
+              <p>Grup projelerinde etkili iletişim ve işbirliği becerilerine sahibim.</p>
+            </div>
+            
+            <div className="feature-card">
+              <div className="feature-icon">
+                <FaRocket />
+              </div>
+              <h4>Sürekli Öğrenme</h4>
+              <p>Yeni teknolojileri öğrenmeye açık, sürekli kendimi geliştiriyorum.</p>
             </div>
           </div>
         </div>

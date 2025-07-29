@@ -4,47 +4,44 @@ import './Skills.css';
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend Teknolojileri",
+      title: "Programlama Dilleri",
       skills: [
-        { name: "HTML5", level: 95 },
-        { name: "CSS3", level: 90 },
-        { name: "JavaScript (ES6+)", level: 85 },
-        { name: "React.js", level: 80 },
-        { name: "TypeScript", level: 75 },
-        { name: "Next.js", level: 70 }
+        { name: "C#", level: 90 },
+        { name: "Python", level: 85 },
+        { name: "C", level: 70 }
       ]
     },
     {
-      title: "Styling & UI",
+      title: "Teknolojiler & Platformlar",
       skills: [
-        { name: "Tailwind CSS", level: 85 },
-        { name: "Styled Components", level: 80 },
-        { name: "Sass/SCSS", level: 75 },
-        { name: "Material-UI", level: 70 },
-        { name: "Bootstrap", level: 85 },
-        { name: "Framer Motion", level: 65 }
+        { name: ".NET", level: 85 },
+        { name: "AWS", level: 80 },
+        { name: "Software Design", level: 75 }
       ]
     },
     {
-      title: "Araçlar & Platformlar",
+      title: "Geliştirme Araçları",
       skills: [
-        { name: "Git & GitHub", level: 90 },
-        { name: "VS Code", level: 95 },
-        { name: "Webpack", level: 70 },
-        { name: "Vite", level: 80 },
-        { name: "Figma", level: 75 },
-        { name: "Postman", level: 70 }
+        { name: "Gamemaker", level: 70 },
+        { name: "Pixelart", level: 65 },
+        { name: "Artificial Intelligence", level: 75 }
       ]
     }
   ];
 
+  const additionalSkills = [
+    "Windows Forms", "Desktop Applications", "Game Development", 
+    "Cloud Computing", "Database Design", "API Development",
+    "Version Control", "Problem Solving", "Algorithm Design"
+  ];
+
   return (
-    <section id="skills" className="skills section">
+    <section className="skills" id="skills">
       <div className="container">
         <h2 className="section-title">Becerilerim</h2>
         <div className="skills-content">
-          {skillCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="skill-category">
+          {skillCategories.map((category, index) => (
+            <div key={index} className="skill-category">
               <h3 className="category-title">{category.title}</h3>
               <div className="skills-grid">
                 {category.skills.map((skill, skillIndex) => (
@@ -64,19 +61,14 @@ const Skills = () => {
               </div>
             </div>
           ))}
-        </div>
-        
-        <div className="skills-summary">
-          <h3>Ek Beceriler</h3>
-          <div className="additional-skills">
-            <span className="skill-tag">Responsive Design</span>
-            <span className="skill-tag">Progressive Web Apps</span>
-            <span className="skill-tag">RESTful APIs</span>
-            <span className="skill-tag">Performance Optimization</span>
-            <span className="skill-tag">SEO</span>
-            <span className="skill-tag">Accessibility</span>
-            <span className="skill-tag">Testing (Jest)</span>
-            <span className="skill-tag">Agile/Scrum</span>
+          
+          <div className="skills-summary">
+            <h3>Ek Beceriler</h3>
+            <div className="additional-skills">
+              {additionalSkills.map((skill, index) => (
+                <span key={index} className="skill-tag">{skill}</span>
+              ))}
+            </div>
           </div>
         </div>
       </div>

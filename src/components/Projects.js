@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { FaGithub, FaExternalLinkAlt, FaEye } from 'react-icons/fa';
 import './Projects.css';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -8,87 +8,64 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Ticaret Web Sitesi",
-      description: "React ve Node.js kullanarak geliştirilmiş modern e-ticaret platformu. Kullanıcı kimlik doğrulama, ürün yönetimi ve ödeme sistemi entegrasyonu.",
-      image: "https://via.placeholder.com/400x250/2563eb/ffffff?text=E-Ticaret",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      category: "web",
-      github: "https://github.com/yourusername/ecommerce",
-      live: "https://ecommerce-demo.com",
-      featured: true
+      title: "Havayolu Rezervasyon Sistemi",
+      description: "C# ile geliştirilmiş masaüstü uygulaması. Koltuk tahsisi ve kullanıcı yönetimi özellikleri ile tam fonksiyonel bir rezervasyon sistemi.",
+      image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=250&fit=crop",
+      technologies: ["C#", ".NET", "Windows Forms", "SQL Server"],
+      category: "desktop",
+      featured: true,
+      github: "https://github.com/omercangumus/airline-reservation",
+      demo: "#"
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "Drag & drop özellikli görev yönetim uygulaması. React DnD ve Firebase kullanılarak geliştirildi.",
-      image: "https://via.placeholder.com/400x250/1d4ed8/ffffff?text=Task+App",
-      technologies: ["React", "Firebase", "React DnD", "Tailwind CSS"],
-      category: "web",
-      github: "https://github.com/yourusername/task-app",
-      live: "https://task-app-demo.com",
-      featured: true
+      title: "Flappy Bird Oyunu",
+      description: "C# ve Windows Forms kullanarak geliştirilmiş klasik Flappy Bird oyunu. Engel mantığı ve skor sistemi ile tam oynanabilir.",
+      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=250&fit=crop",
+      technologies: ["C#", "Windows Forms", "Game Development", "OOP"],
+      category: "game",
+      featured: false,
+      github: "https://github.com/omercangumus/flappy-bird",
+      demo: "#"
     },
     {
       id: 3,
-      title: "Weather Dashboard",
-      description: "Gerçek zamanlı hava durumu bilgilerini gösteren responsive dashboard. OpenWeatherMap API entegrasyonu.",
-      image: "https://via.placeholder.com/400x250/0ea5e9/ffffff?text=Weather+App",
-      technologies: ["JavaScript", "CSS3", "HTML5", "Weather API"],
-      category: "web",
-      github: "https://github.com/yourusername/weather-app",
-      live: "https://weather-dashboard.com",
-      featured: false
+      title: "AWS Cloud Projeleri",
+      description: "AWS platformunda geliştirilmiş çeşitli bulut bilişim projeleri. Serverless mimari ve cloud-native çözümler.",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop",
+      technologies: ["AWS", "Python", "Cloud Computing", "Serverless"],
+      category: "cloud",
+      featured: true,
+      github: "https://github.com/omercangumus/aws-projects",
+      demo: "#"
     },
     {
       id: 4,
-      title: "Portfolio Website",
-      description: "Modern ve responsive portfolio web sitesi. React ve CSS Grid kullanılarak geliştirildi.",
-      image: "https://via.placeholder.com/400x250/7c3aed/ffffff?text=Portfolio",
-      technologies: ["React", "CSS3", "JavaScript", "Responsive Design"],
-      category: "web",
-      github: "https://github.com/yourusername/portfolio",
-      live: "https://portfolio-demo.com",
-      featured: false
-    },
-    {
-      id: 5,
-      title: "Recipe Finder",
-      description: "Yemek tarifleri arama ve filtreleme uygulaması. Spoonacular API kullanılarak geliştirildi.",
-      image: "https://via.placeholder.com/400x250/059669/ffffff?text=Recipe+App",
-      technologies: ["React", "API Integration", "CSS3", "JavaScript"],
-      category: "web",
-      github: "https://github.com/yourusername/recipe-app",
-      live: "https://recipe-finder.com",
-      featured: false
-    },
-    {
-      id: 6,
-      title: "Chat Application",
-      description: "Gerçek zamanlı mesajlaşma uygulaması. Socket.io ve React kullanılarak geliştirildi.",
-      image: "https://via.placeholder.com/400x250/dc2626/ffffff?text=Chat+App",
-      technologies: ["React", "Socket.io", "Node.js", "Express"],
-      category: "web",
-      github: "https://github.com/yourusername/chat-app",
-      live: "https://chat-app-demo.com",
-      featured: false
+      title: "Python Veri Analizi",
+      description: "Python kullanarak geliştirilmiş veri analizi ve makine öğrenmesi projeleri. Pandas, NumPy ve Scikit-learn kullanımı.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
+      technologies: ["Python", "Pandas", "NumPy", "Machine Learning"],
+      category: "ai",
+      featured: false,
+      github: "https://github.com/omercangumus/python-data-analysis",
+      demo: "#"
     }
   ];
 
   const filters = [
     { id: 'all', label: 'Tümü' },
-    { id: 'web', label: 'Web Uygulamaları' },
-    { id: 'mobile', label: 'Mobil Uygulamalar' },
-    { id: 'featured', label: 'Öne Çıkanlar' }
+    { id: 'desktop', label: 'Masaüstü' },
+    { id: 'game', label: 'Oyun' },
+    { id: 'cloud', label: 'Bulut' },
+    { id: 'ai', label: 'Yapay Zeka' }
   ];
 
-  const filteredProjects = projects.filter(project => {
-    if (activeFilter === 'all') return true;
-    if (activeFilter === 'featured') return project.featured;
-    return project.category === activeFilter;
-  });
+  const filteredProjects = activeFilter === 'all' 
+    ? projects 
+    : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="projects" className="projects section">
+    <section className="projects" id="projects">
       <div className="container">
         <h2 className="section-title">Projelerim</h2>
         
@@ -107,23 +84,22 @@ const Projects = () => {
         <div className="projects-grid">
           {filteredProjects.map(project => (
             <div key={project.id} className={`project-card ${project.featured ? 'featured' : ''}`}>
+              {project.featured && (
+                <div className="featured-badge">Öne Çıkan</div>
+              )}
+              
               <div className="project-image">
                 <img src={project.image} alt={project.title} />
                 <div className="project-overlay">
                   <div className="project-links">
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
+                    <a href={project.github} className="project-link" target="_blank" rel="noopener noreferrer">
                       <FaGithub />
                     </a>
-                    <a href={project.live} target="_blank" rel="noopener noreferrer" className="project-link">
+                    <a href={project.demo} className="project-link" target="_blank" rel="noopener noreferrer">
                       <FaExternalLinkAlt />
                     </a>
                   </div>
                 </div>
-                {project.featured && (
-                  <div className="featured-badge">
-                    <span>Öne Çıkan</span>
-                  </div>
-                )}
               </div>
               
               <div className="project-content">
@@ -141,8 +117,9 @@ const Projects = () => {
 
         <div className="projects-cta">
           <p>Daha fazla proje görmek ister misiniz?</p>
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="btn">
-            <FaGithub /> GitHub Profilim
+          <a href="https://github.com/omercangumus" className="btn" target="_blank" rel="noopener noreferrer">
+            <FaGithub />
+            GitHub Profilimi Ziyaret Et
           </a>
         </div>
       </div>

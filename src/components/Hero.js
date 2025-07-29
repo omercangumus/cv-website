@@ -1,69 +1,54 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import './Hero.css';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Hero = () => {
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <section id="home" className="hero">
+    <section className="hero" id="home">
+      <div className="hero-shapes">
+        <div className="shape shape-1"></div>
+        <div className="shape shape-2"></div>
+        <div className="shape shape-3"></div>
+      </div>
+      
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">
-            <div className="hero-badge">
-              <span>👋 Merhaba, ben</span>
-            </div>
+            <div className="hero-badge">Merhaba, ben</div>
             <h1 className="hero-title">
-              <span className="hero-name">Adınız Soyadınız</span>
-              <span className="hero-role">Front-End Developer</span>
+              <span className="hero-name">Ömer Can Gümüş</span>
+              <span className="hero-role">Software Engineering Student</span>
             </h1>
             <p className="hero-description">
-              Modern web teknolojileri ile kullanıcı dostu ve etkileyici 
-              web uygulamaları geliştiriyorum. React, JavaScript ve 
-              modern CSS ile yaratıcı çözümler üretiyorum.
+              Fırat Üniversitesi'nde 3. sınıf Yazılım Mühendisliği öğrencisiyim. 
+              Bulut bilişim ve yapay zeka alanlarında tutkulu bir geliştirici olarak 
+              AWS platformunda aktif çalışıyorum. C# ve Python konularında uzmanım.
             </p>
+            
             <div className="hero-buttons">
-              <button 
-                className="btn btn-primary"
-                onClick={() => scrollToSection('projects')}
-              >
-                Projelerimi Görüntüle
-              </button>
-              <button 
-                className="btn btn-secondary"
-                onClick={() => scrollToSection('contact')}
-              >
-                İletişime Geç
-              </button>
+              <a href="#projects" className="btn btn-primary">Projelerimi Gör</a>
+              <a href="#contact" className="btn btn-secondary">İletişime Geç</a>
             </div>
+            
             <div className="hero-social">
-              <a href="mailto:email@example.com" className="social-link">
-                <FaEnvelope />
+              <a href="https://github.com/omercangumus" className="social-link" target="_blank" rel="noopener noreferrer">
+                <FaGithub />
               </a>
-              <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href="https://linkedin.com/in/ömer-can-gümüş-a76950258" className="social-link" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin />
               </a>
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="social-link">
-                <FaGithub />
+              <a href="mailto:omercangumus3@gmail.com" className="social-link">
+                <FaEnvelope />
               </a>
             </div>
           </div>
+          
           <div className="hero-image">
             <div className="profile-image">
               <div className="image-placeholder">
-                <span>📸</span>
-                <p>Profil Fotoğrafınız</p>
+                <span>👨‍💻</span>
+                <p>Ömer Can Gümüş</p>
               </div>
-            </div>
-            <div className="hero-shapes">
-              <div className="shape shape-1"></div>
-              <div className="shape shape-2"></div>
-              <div className="shape shape-3"></div>
             </div>
           </div>
         </div>
