@@ -137,9 +137,9 @@ Bu proje MIT lisansı altında lisanslanmıştır.
 ## 📞 İletişim
 
 Herhangi bir sorunuz varsa, lütfen iletişime geçin:
-- Email: email@example.com
-- LinkedIn: [LinkedIn Profilim](https://linkedin.com/in/yourprofile)
-- GitHub: [GitHub Profilim](https://github.com/yourusername)
+- Email:omercangumus@gmail.com
+- LinkedIn: [LinkedIn Profilim](https://www.linkedin.com/in/%C3%B6mer-can-g%C3%BCm%C3%BC%C5%9F-a76950258/)
+- GitHub: [GitHub Profilim](https://github.com/omercangumus)
 
 ---
 
